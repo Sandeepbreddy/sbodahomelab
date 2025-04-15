@@ -1,0 +1,9 @@
+apiVersion: projectcalico.org/v3
+kind: BGPFilter
+metadata:
+  name: deny-rule-lb
+spec:
+  exportV4:
+    - action: Reject
+      matchOperator: In
+      cidr: 192.168.70.0/24

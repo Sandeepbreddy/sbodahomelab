@@ -1,0 +1,10 @@
+apiVersion: projectcalico.org/v3
+kind: BGPPeer
+metadata:
+  name: worker2-worker1
+spec:
+  node: sboda-worker2
+  peerIP: 192.168.10.11
+  asNumber: 64512
+  filters:
+    - deny-rule-lb

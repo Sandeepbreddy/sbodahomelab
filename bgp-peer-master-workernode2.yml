@@ -1,0 +1,10 @@
+apiVersion: projectcalico.org/v3
+kind: BGPPeer
+metadata:
+  name: master-worker2
+spec:
+  node: master
+  peerIP: 192.168.10.12
+  asNumber: 64512
+  filters:
+    - deny-rule-lb
